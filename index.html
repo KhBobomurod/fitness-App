@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fitness va Sog'liqni Saqlash Ilovasi</title>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Fitness va Sog'liqni Saqlash Ilovasi</h1>
+      <label for="sport">Sport turi:</label>
+      <select id="sport">
+        <option value="Yugurish">Yugurish</option>
+        <option value="Velosipedda yurish">Velosipedda yurish</option>
+        <option value="Suzish">Suzish</option>
+        <option value="Futbol">Futbol</option>
+        <option value="Basketbol">Basketbol</option>
+        <option value="Tennis">Tennis</option>
+        <option value="Stol tennisi">Stol tennisi</option>
+        <option value="Badminton">Badminton</option>
+        <option value="Voleybol">Voleybol</option>
+        <option value="Golf">Golf</option>
+        <option value="Yoga">Yoga</option>
+        <option value="Pilates">Pilates</option>
+        <option value="Zumba">Zumba</option>
+        <option value="Aerobika">Aerobika</option>
+        <option value="Boks">Boks</option>
+        <option value="Karate">Karate</option>
+        <option value="Judo">Judo</option>
+        <option value="Taekvondo">Taekvondo</option>
+        <option value="Qilichbozlik">Qilichbozlik</option>
+        <option value="Qayiqda eshkak eshish">Qayiqda eshkak eshish</option>
+        <option value="Kanoe">Kanoe</option>
+        <option value="Kajak">Kajak</option>
+        <option value="Qorli chang'i">Qorli chang'i</option>
+        <option value="Snoubord">Snoubord</option>
+        <option value="Skating">Skating</option>
+        <option value="Raqs">Raqs</option>
+        <option value="Cheerleading">Cheerleading</option>
+        <option value="Gimnastika">Gimnastika</option>
+        <option value="Triatlon">Triatlon</option>
+        <option value="Marafon">Marafon</option>
+      </select>
+      <label for="duration">Mashg'ulot vaqti (daqiqalar):</label>
+      <input
+        type="number"
+        id="duration"
+        step="1"
+        onkeypress="if(event.key === 'Enter') calculate()"
+      />
+      <button onclick="calculate()">Hisoblash</button>
+      <div class="result" id="result"></div>
+    </div>
+    <div class="container" id="profile-container">
+      <h2>Profil Yaratish</h2>
+      <label for="username">Foydalanuvchi nomi:</label>
+      <input type="text" id="username" />
+      <label for="email">Email:</label>
+      <input type="email" id="email" />
+      <label for="password">Parol:</label>
+      <input type="password" id="password" />
+      <button onclick="createProfile()">Profil Yaratish</button>
+    </div>
+    <div class="container" id="edit-profile-container" style="display: none">
+      <h2>Profilni Tahrirlash</h2>
+      <label for="edit-username">Foydalanuvchi nomi:</label>
+      <input type="text" id="edit-username" />
+      <label for="edit-email">Email:</label>
+      <input type="email" id="edit-email" />
+      <label for="edit-password">Parol:</label>
+      <input type="password" id="edit-password" />
+      <button onclick="saveProfile()">Saqlash</button>
+    </div>
+    <canvas id="myChart" width="300" height="150"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
